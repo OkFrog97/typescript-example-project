@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Система автоматизации ветеренарных клиник</title>
+    <!-- Подключаем скомпиоированные стили -->
+    <link rel="stylesheet" href="./build/css/style.css">
+</head>
+<body>
+        
+    <div class="header">
+        <nav class="navbar">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="./src/img/corgi-logo.svg" class="corgi-logo" alt="Bootstrap" width="50" height="50">
+                </a>
+            </div>
+        </nav>
+    </div>
+    <div class="main">
+        <div class="container mt-1">
+            <div class="row">
+                <!-- Раздел Формы -->
+                <div class="col-6">
+                    <!-- Сама форма -->
+                    <div class="row">
+                        <form class="col mb-3" name="taskForm">
+                            <div class="col">
+                                <div class="row">
+                                    <div class="column">
+                                        <label for="nick" class="form-label">Имя питомца</label>
+                                        <input type="text" class="form-control" id="nick" name="nick">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="column">
+                                        <label for="name" class="form-label">Имя владельца</label>
+                                        <input type="text" class="form-control" id="name" name="name">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="column">
+                                        <label for="date" class="form-label">Дата следующего посещения</label>
+                                        <input type="datetime-local" class="form-control" id="date" name="date">
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="column">
+                                        <label for="caseHistory" class="form-label">История болезни</label>
+                                        <textarea class="form-control" id="caseHistory" name="caseHistory" rows="4"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                     <!-- Кнопка -->
+                    <div class="row">
+                        <div class="column">
+                            <button id="tstBtn" type="button" class="btn btn-primary">Отправить</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Календарь -->
+                <div class="col-6">
+                    <div class="row">
+                        <div class="column">
+                            <div id="calendar"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+    </div>
+    <!-- Подключаем скомпилированные скрипты -->
+    <script>var exports = {};</script>
+    <script type="module" src="./build/scripts/app.js"></script>
+</body>
+</html>
